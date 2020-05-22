@@ -2,10 +2,14 @@
 Input: a List of integers
 Returns: a List of integers
 '''
+from functools import reduce 
+
 def product_of_all_other_numbers(arr):
     # Your code here
+    sum: int = reduce(lambda x, y: x*y, arr)
 
-    pass
+    arr = [sum/item for item in arr]
+    return arr 
 
 
 if __name__ == '__main__':
